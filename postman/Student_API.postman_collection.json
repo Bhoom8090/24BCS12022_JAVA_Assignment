@@ -1,0 +1,61 @@
+{
+  "info": {
+    "name": "Student Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add Student",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"name\": \"Rahul Sharma\",\n  \"email\": \"rahul@example.com\",\n  \"course\": \"Computer Science\",\n  \"age\": 20\n}" },
+        "url": { "raw": "http://localhost:8080/api/students", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "students"] }
+      }
+    },
+    {
+      "name": "Get All Students",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8080/api/students", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "students"] }
+      }
+    },
+    {
+      "name": "Get Student By Id",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8080/api/students/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "students", "1"] }
+      }
+    },
+    {
+      "name": "Update Student",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"name\": \"Rahul Kumar Sharma\",\n  \"email\": \"rahul@example.com\",\n  \"course\": \"Information Technology\",\n  \"age\": 21\n}" },
+        "url": { "raw": "http://localhost:8080/api/students/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "students", "1"] }
+      }
+    },
+    {
+      "name": "Delete Student",
+      "request": {
+        "method": "DELETE",
+        "url": { "raw": "http://localhost:8080/api/students/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "students", "1"] }
+      }
+    },
+    {
+      "name": "Get Students By Course",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8080/api/students/course/Computer Science", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "students", "course", "Computer Science"] }
+      }
+    },
+    {
+      "name": "Get Student - Not Found (404)",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8080/api/students/999", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "students", "999"] }
+      }
+    }
+  ]
+}
